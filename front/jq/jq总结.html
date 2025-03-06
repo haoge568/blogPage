@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>【jq】总结 | 豪哥的个人博客</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/星光荡开宇宙.jpeg">
+    <script language="javascript" type="text/javascript" src="/js/jq.js"></script>
+    <script language="javascript" type="text/javascript" src="/js/MouseClickEffect.js"></script>
+    <script language="javascript" type="text/javascript" src="/js/bg.js"></script>
+    <link rel="stylesheet" href="/css/sweetalert.css">
+    <script language="javascript" type="text/javascript" src="/js/sweetalert.js"></script>
+    <meta name="description" content="凡心所向，素履所往，生如逆旅，一苇以航。不关此世，不负己心，我自倾杯，且君随意。">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.ea580b5a.css" as="style"><link rel="preload" href="/assets/js/app.ca452e2b.js" as="script"><link rel="preload" href="/assets/js/3.69ab2c12.js" as="script"><link rel="preload" href="/assets/js/1.a19a2f43.js" as="script"><link rel="preload" href="/assets/js/98.58c9d6d6.js" as="script"><link rel="prefetch" href="/assets/js/10.d4a54901.js"><link rel="prefetch" href="/assets/js/100.176d7025.js"><link rel="prefetch" href="/assets/js/101.35bc5f69.js"><link rel="prefetch" href="/assets/js/102.db75ed81.js"><link rel="prefetch" href="/assets/js/103.7bb21512.js"><link rel="prefetch" href="/assets/js/104.4992bc87.js"><link rel="prefetch" href="/assets/js/105.4b760617.js"><link rel="prefetch" href="/assets/js/106.ac5d7588.js"><link rel="prefetch" href="/assets/js/107.54bd5e36.js"><link rel="prefetch" href="/assets/js/108.1a459e5f.js"><link rel="prefetch" href="/assets/js/109.471af652.js"><link rel="prefetch" href="/assets/js/11.042593f9.js"><link rel="prefetch" href="/assets/js/110.58864cfd.js"><link rel="prefetch" href="/assets/js/111.893e6a4a.js"><link rel="prefetch" href="/assets/js/112.93cafa8d.js"><link rel="prefetch" href="/assets/js/113.bf0f2672.js"><link rel="prefetch" href="/assets/js/114.4a9f18a7.js"><link rel="prefetch" href="/assets/js/115.cdc3d973.js"><link rel="prefetch" href="/assets/js/116.679d0d76.js"><link rel="prefetch" href="/assets/js/117.56376310.js"><link rel="prefetch" href="/assets/js/118.3b141129.js"><link rel="prefetch" href="/assets/js/119.63a85bcd.js"><link rel="prefetch" href="/assets/js/12.940b8e17.js"><link rel="prefetch" href="/assets/js/120.3a7164a9.js"><link rel="prefetch" href="/assets/js/121.f255133d.js"><link rel="prefetch" href="/assets/js/122.e3e15396.js"><link rel="prefetch" href="/assets/js/123.d86cbd29.js"><link rel="prefetch" href="/assets/js/124.e23fff5f.js"><link rel="prefetch" href="/assets/js/125.16842346.js"><link rel="prefetch" href="/assets/js/126.182d1d8f.js"><link rel="prefetch" href="/assets/js/127.d1b0a518.js"><link rel="prefetch" href="/assets/js/128.fd7ae132.js"><link rel="prefetch" href="/assets/js/129.c7d69d09.js"><link rel="prefetch" href="/assets/js/13.8e611c6a.js"><link rel="prefetch" href="/assets/js/130.8761ceb7.js"><link rel="prefetch" href="/assets/js/131.f8867c2b.js"><link rel="prefetch" href="/assets/js/132.bacc54ee.js"><link rel="prefetch" href="/assets/js/133.bf9ba6fb.js"><link rel="prefetch" href="/assets/js/134.3e87f647.js"><link rel="prefetch" href="/assets/js/135.68ba6976.js"><link rel="prefetch" href="/assets/js/136.b12e83d2.js"><link rel="prefetch" href="/assets/js/137.72b07b2c.js"><link rel="prefetch" href="/assets/js/138.271e41ed.js"><link rel="prefetch" href="/assets/js/139.411eafe7.js"><link rel="prefetch" href="/assets/js/14.b1d0e6c4.js"><link rel="prefetch" href="/assets/js/140.fd0a3a5f.js"><link rel="prefetch" href="/assets/js/15.b641f11e.js"><link rel="prefetch" href="/assets/js/16.6c3d21ed.js"><link rel="prefetch" href="/assets/js/17.f5511d09.js"><link rel="prefetch" href="/assets/js/18.5302dd7a.js"><link rel="prefetch" href="/assets/js/19.ae83164a.js"><link rel="prefetch" href="/assets/js/20.3c37d6cb.js"><link rel="prefetch" href="/assets/js/21.75063c8c.js"><link rel="prefetch" href="/assets/js/22.ce482986.js"><link rel="prefetch" href="/assets/js/23.bc0c0ed5.js"><link rel="prefetch" href="/assets/js/24.0ccff61b.js"><link rel="prefetch" href="/assets/js/25.45099e62.js"><link rel="prefetch" href="/assets/js/26.82f4fe6f.js"><link rel="prefetch" href="/assets/js/27.20b6938d.js"><link rel="prefetch" href="/assets/js/28.e6c039b7.js"><link rel="prefetch" href="/assets/js/29.ab032ca5.js"><link rel="prefetch" href="/assets/js/30.1e32ff9f.js"><link rel="prefetch" href="/assets/js/31.bccdef67.js"><link rel="prefetch" href="/assets/js/32.589edc7e.js"><link rel="prefetch" href="/assets/js/33.b3818af9.js"><link rel="prefetch" href="/assets/js/34.3e760afd.js"><link rel="prefetch" href="/assets/js/35.c102a0c4.js"><link rel="prefetch" href="/assets/js/36.d3506845.js"><link rel="prefetch" href="/assets/js/37.e4f3d0f7.js"><link rel="prefetch" href="/assets/js/38.e82014b2.js"><link rel="prefetch" href="/assets/js/39.63886b7b.js"><link rel="prefetch" href="/assets/js/4.ab2fd419.js"><link rel="prefetch" href="/assets/js/40.a9940b45.js"><link rel="prefetch" href="/assets/js/41.c90d7cd8.js"><link rel="prefetch" href="/assets/js/42.5db860f4.js"><link rel="prefetch" href="/assets/js/43.e4bb427d.js"><link rel="prefetch" href="/assets/js/44.53161cb0.js"><link rel="prefetch" href="/assets/js/45.4580b921.js"><link rel="prefetch" href="/assets/js/46.8ce77796.js"><link rel="prefetch" href="/assets/js/47.85cc0d53.js"><link rel="prefetch" href="/assets/js/48.16f2661f.js"><link rel="prefetch" href="/assets/js/49.bb39c70b.js"><link rel="prefetch" href="/assets/js/5.cab1676f.js"><link rel="prefetch" href="/assets/js/50.c22ecea6.js"><link rel="prefetch" href="/assets/js/51.e913c295.js"><link rel="prefetch" href="/assets/js/52.49efc0e1.js"><link rel="prefetch" href="/assets/js/53.b29579e7.js"><link rel="prefetch" href="/assets/js/54.987f21d4.js"><link rel="prefetch" href="/assets/js/55.d9e38a6d.js"><link rel="prefetch" href="/assets/js/56.f46471f2.js"><link rel="prefetch" href="/assets/js/57.e0d5a3af.js"><link rel="prefetch" href="/assets/js/58.0ab53d83.js"><link rel="prefetch" href="/assets/js/59.33ec0f8e.js"><link rel="prefetch" href="/assets/js/6.b157d83c.js"><link rel="prefetch" href="/assets/js/60.1762b4db.js"><link rel="prefetch" href="/assets/js/61.97ba8bc8.js"><link rel="prefetch" href="/assets/js/62.9cbafc29.js"><link rel="prefetch" href="/assets/js/63.18c92aa0.js"><link rel="prefetch" href="/assets/js/64.3b0eb3ac.js"><link rel="prefetch" href="/assets/js/65.64b3938f.js"><link rel="prefetch" href="/assets/js/66.8ffa9c15.js"><link rel="prefetch" href="/assets/js/67.54a87413.js"><link rel="prefetch" href="/assets/js/68.39beb957.js"><link rel="prefetch" href="/assets/js/69.545626d5.js"><link rel="prefetch" href="/assets/js/7.19dad152.js"><link rel="prefetch" href="/assets/js/70.c05d4ae9.js"><link rel="prefetch" href="/assets/js/71.0151bf0c.js"><link rel="prefetch" href="/assets/js/72.dc3d35b7.js"><link rel="prefetch" href="/assets/js/73.c7871ace.js"><link rel="prefetch" href="/assets/js/74.4f956b30.js"><link rel="prefetch" href="/assets/js/75.f0d9b8c1.js"><link rel="prefetch" href="/assets/js/76.6a81553d.js"><link rel="prefetch" href="/assets/js/77.0b3cdbf9.js"><link rel="prefetch" href="/assets/js/78.20f83202.js"><link rel="prefetch" href="/assets/js/79.a7fd8a10.js"><link rel="prefetch" href="/assets/js/8.6d4114e0.js"><link rel="prefetch" href="/assets/js/80.9591fe96.js"><link rel="prefetch" href="/assets/js/81.f81716be.js"><link rel="prefetch" href="/assets/js/82.f9855cc4.js"><link rel="prefetch" href="/assets/js/83.a1c1c058.js"><link rel="prefetch" href="/assets/js/84.70d95af0.js"><link rel="prefetch" href="/assets/js/85.1d7040bc.js"><link rel="prefetch" href="/assets/js/86.eba1ac36.js"><link rel="prefetch" href="/assets/js/87.99040d5c.js"><link rel="prefetch" href="/assets/js/88.6cb07beb.js"><link rel="prefetch" href="/assets/js/89.4e92a88d.js"><link rel="prefetch" href="/assets/js/9.2461878c.js"><link rel="prefetch" href="/assets/js/90.1ca1c350.js"><link rel="prefetch" href="/assets/js/91.08f5ad24.js"><link rel="prefetch" href="/assets/js/92.0fbb2e44.js"><link rel="prefetch" href="/assets/js/93.85cfbe81.js"><link rel="prefetch" href="/assets/js/94.3cd2a311.js"><link rel="prefetch" href="/assets/js/95.264d395f.js"><link rel="prefetch" href="/assets/js/96.37bff498.js"><link rel="prefetch" href="/assets/js/97.7864be15.js"><link rel="prefetch" href="/assets/js/99.0489c122.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ea580b5a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-2d5f533b><div data-v-2d5f533b><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-2d5f533b data-v-2d5f533b><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-2d5f533b data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>豪哥的个人博客</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>haoge</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-2d5f533b><header class="navbar" data-v-2d5f533b><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/星光荡开宇宙.jpeg" alt="豪哥的个人博客" class="logo"> <span class="site-name">豪哥的个人博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul> <ul class="color-mode-options" style="margin-top:5px"><li class="datu active">大图</li><li class="default">默认</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/html/html.html" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/front/css/css.html" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/front/js/js.html" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/front/daily/daily.html" class="nav-link"><i class="iconfont undefined"></i>
+  js每日总结
+</a></li><li class="dropdown-item"><!----> <a href="/front/jq/jq.html" class="nav-link"><i class="iconfont undefined"></i>
+  jq
+</a></li><li class="dropdown-item"><!----> <a href="/frontwork/vue/vue.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/frontwork/react/react.html" class="nav-link"><i class="iconfont undefined"></i>
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      后端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/mongodb/mongodb.html" class="nav-link"><i class="iconfont undefined"></i>
+  mongodb
+</a></li><li class="dropdown-item"><!----> <a href="/backend/mysql/mysql.html" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/backend/nodejs/nodejs.html" class="nav-link"><i class="iconfont undefined"></i>
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/backend/php/php.html" class="nav-link"><i class="iconfont undefined"></i>
+  php
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-coding"></i>
+      工具
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tool/vscode/vscode.html" class="nav-link"><i class="iconfont undefined"></i>
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/tool/git/git.html" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/tool/easymock/easymock.html" class="nav-link"><i class="iconfont undefined"></i>
+  easymock
+</a></li><li class="dropdown-item"><!----> <a href="/tool/npm/npm.html" class="nav-link"><i class="iconfont undefined"></i>
+  npm
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-other"></i>
+      面试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/face/face/face.html" class="nav-link"><i class="iconfont undefined"></i>
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/face/suan/suan.html" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-menu"></i>
+      工作
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/work/project/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  项目
+</a></li><li class="dropdown-item"><!----> <a href="/work/stepping/stepping.html" class="nav-link"><i class="iconfont undefined"></i>
+  踩坑指南
+</a></li><li class="dropdown-item"><!----> <a href="/work/technology/technology.html" class="nav-link"><i class="iconfont undefined"></i>
+  技术
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-account"></i>
+      关于我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about/version/version.html" class="nav-link"><i class="iconfont undefined"></i>
+  博客版本更新
+</a></li><li class="dropdown-item"><!----> <a href="/about/my/my.html" class="nav-link"><i class="iconfont undefined"></i>
+  关于我
+</a></li></ul></div></div><div class="nav-item"><a href="/tellme/tellme.html" class="nav-link"><i class="iconfont reco-suggestion"></i>
+  留言板
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-2d5f533b></div> <aside class="sidebar" data-v-2d5f533b><div class="personal-info-wrapper" data-v-ca798c94 data-v-2d5f533b><img src="/星光荡开宇宙.jpeg" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    haoge
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>100</h3> <h6 data-v-ca798c94>Article</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>33</h3> <h6 data-v-ca798c94>Tag</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-api"></i>
+      前端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/front/html/html.html" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/front/css/css.html" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/front/js/js.html" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/front/daily/daily.html" class="nav-link"><i class="iconfont undefined"></i>
+  js每日总结
+</a></li><li class="dropdown-item"><!----> <a href="/front/jq/jq.html" class="nav-link"><i class="iconfont undefined"></i>
+  jq
+</a></li><li class="dropdown-item"><!----> <a href="/frontwork/vue/vue.html" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/frontwork/react/react.html" class="nav-link"><i class="iconfont undefined"></i>
+  react
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      后端
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/backend/mongodb/mongodb.html" class="nav-link"><i class="iconfont undefined"></i>
+  mongodb
+</a></li><li class="dropdown-item"><!----> <a href="/backend/mysql/mysql.html" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/backend/nodejs/nodejs.html" class="nav-link"><i class="iconfont undefined"></i>
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/backend/php/php.html" class="nav-link"><i class="iconfont undefined"></i>
+  php
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-coding"></i>
+      工具
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tool/vscode/vscode.html" class="nav-link"><i class="iconfont undefined"></i>
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/tool/git/git.html" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/tool/easymock/easymock.html" class="nav-link"><i class="iconfont undefined"></i>
+  easymock
+</a></li><li class="dropdown-item"><!----> <a href="/tool/npm/npm.html" class="nav-link"><i class="iconfont undefined"></i>
+  npm
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-other"></i>
+      面试
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/face/face/face.html" class="nav-link"><i class="iconfont undefined"></i>
+  面试题
+</a></li><li class="dropdown-item"><!----> <a href="/face/suan/suan.html" class="nav-link"><i class="iconfont undefined"></i>
+  算法
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-menu"></i>
+      工作
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/work/project/project.html" class="nav-link"><i class="iconfont undefined"></i>
+  项目
+</a></li><li class="dropdown-item"><!----> <a href="/work/stepping/stepping.html" class="nav-link"><i class="iconfont undefined"></i>
+  踩坑指南
+</a></li><li class="dropdown-item"><!----> <a href="/work/technology/technology.html" class="nav-link"><i class="iconfont undefined"></i>
+  技术
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-account"></i>
+      关于我
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about/version/version.html" class="nav-link"><i class="iconfont undefined"></i>
+  博客版本更新
+</a></li><li class="dropdown-item"><!----> <a href="/about/my/my.html" class="nav-link"><i class="iconfont undefined"></i>
+  关于我
+</a></li></ul></div></div><div class="nav-item"><a href="/tellme/tellme.html" class="nav-link"><i class="iconfont reco-suggestion"></i>
+  留言板
+</a></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>html</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>jq</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/front/jq/jq.html" class="sidebar-link">Jq</a></li><li><a href="/front/jq/1.html" class="sidebar-link">【jq】第一天</a></li><li><a href="/front/jq/2.html" class="sidebar-link">【jq】第二天</a></li><li><a href="/front/jq/3.html" class="sidebar-link">【jq】第三天</a></li><li><a href="/front/jq/4.html" class="sidebar-link">【jq】第四天</a></li><li><a href="/front/jq/jq总结.html" class="active sidebar-link">【jq】总结</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>js总结</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>【jq】总结</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>haoge</span>
+            
+          <span data-v-64685f0e>2017 - </span>
+          2022
+        </a></span></div></div> <div data-v-2d5f533b><main class="page"><div class="page-title" style="display:none;"><h1 class="title">【jq】总结</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>haoge</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2018-08-10</span></i> <i class="iconfont reco-eye" data-v-3b7f5bdf><span id="/front/jq/jq%E6%80%BB%E7%BB%93.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-3b7f5bdf><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>js</span><span class="tag-item" data-v-3b7f5bdf>汇总</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="jq总结"><a href="#jq总结" class="header-anchor">#</a> jq总结</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>jq的优点<span class="token operator">&gt;</span>
+    <span class="token number">1.</span>封装方法多
+    <span class="token number">2.</span>隐式迭代
+    <span class="token number">3.</span>没有兼容问题
+    <span class="token number">4.</span>代码简洁
+
+<span class="token operator">&lt;</span>入口函数 优缺点<span class="token operator">&gt;</span>
+    <span class="token number">1.</span>$<span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token number">2.</span><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    js的入口函数需要页面全部加载完成才执行，
+    jq的入口函数只需要基本的标签加载完就可以执行。
+
+<span class="token operator">&lt;</span>jq和js转换 为什么转换<span class="token operator">&gt;</span>
+    <span class="token keyword">var</span> $dv <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&quot;#dv&quot;</span><span class="token punctuation">)</span>  <span class="token comment">//jQuery对象</span>
+    <span class="token keyword">var</span> dv <span class="token operator">=</span> $dv<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>     <span class="token comment">//DOM对象</span>
+    方法不通用，dom对象只能使用dom的方法，而jq对象只能使用jq的方法。
+
+<span class="token operator">&lt;</span>jq对象和dom对象的区别<span class="token operator">&gt;</span>
+    <span class="token function">jq对象是一个包装集</span><span class="token punctuation">(</span>伪数组<span class="token punctuation">)</span>
+
+<span class="token operator">&lt;</span>选择器及作用<span class="token operator">&gt;</span>
+    <span class="token number">1.</span>id选择器 获取指定id的元素
+    <span class="token number">2.</span>类选择器 获取同一类<span class="token keyword">class</span>的元素
+    <span class="token number">3.</span>标签选择器 获取相同标签的所有元素
+    <span class="token number">4.</span>交集选择器 获取满足所有条件的元素
+    <span class="token number">5.</span>并集选择器 <span class="token function">获取满足条件之一的元素</span><span class="token punctuation">(</span>逗号隔开<span class="token punctuation">)</span>
+    <span class="token number">6.</span>子代选择器 <span class="token function">获取第一代的元素</span><span class="token punctuation">(</span>使用<span class="token operator">&gt;</span><span class="token punctuation">)</span>
+    <span class="token number">7.</span>后代选择器 <span class="token function">获取所有子级的元素</span><span class="token punctuation">(</span>使用空格<span class="token punctuation">)</span>
+    <span class="token number">8.</span>过滤选择器
+      <span class="token operator">:</span><span class="token function">eq</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  获取指定索引的元素
+      <span class="token operator">:</span><span class="token function">odd</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 获取索引是奇数的元素
+      <span class="token operator">:</span><span class="token function">even</span><span class="token punctuation">(</span><span class="token punctuation">)</span>获取索引是偶数的元素
+    <span class="token number">9.</span>筛选选择器
+      <span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token punctuation">)</span>获取元素的第一代元素 相当于子选择器
+      <span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    获取元素所有的子元素 相当于后代选择器
+      <span class="token punctuation">.</span><span class="token function">siblings</span><span class="token punctuation">(</span><span class="token punctuation">)</span>获取元素的兄弟元素 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&quot;div&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sibings</span><span class="token punctuation">(</span><span class="token string">&quot;ul&quot;</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  获取父级元素
+      <span class="token punctuation">.</span><span class="token function">eq</span><span class="token punctuation">(</span><span class="token punctuation">)</span>      获取指定索引的元素
+      <span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    获取下一个兄弟元素
+      <span class="token punctuation">.</span><span class="token function">prev</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    获取上一个兄弟元素
+
+<span class="token operator">&lt;</span>jq的事件加载<span class="token operator">&gt;</span>
+    <span class="token function">一是$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    二是ready，表示文档结构已经加载完成（不包含图片等非文字媒体文件），
+    三是load，指示页面包含图片等文件在内的所有元素都加载完成。
+
+<span class="token operator">&lt;</span>链式编程<span class="token operator">&gt;</span>
+    对象调用方法后返回的还是这个对象本身
+    优点：省略重复性的代码
+
+<span class="token operator">&lt;</span>解决断链问题<span class="token operator">&gt;</span>
+    <span class="token function">调用end</span><span class="token punctuation">(</span><span class="token punctuation">)</span>方法。返回链被破坏前的对象。
+
+<span class="token operator">&lt;</span>动画效果及参数<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#dv'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    第一个参数：对象，里面可以传需要动画的样式
+    第二个参数：speed 动画的执行时间
+    第三个参数：动画的执行效果
+    第四个参数：回调函数
+
+    <span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 和 <span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span>         <span class="token operator">--</span><span class="token operator">&gt;</span>  显示隐藏
+    <span class="token punctuation">.</span><span class="token function">slideUp</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 和 <span class="token punctuation">.</span><span class="token function">slideDown</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">--</span><span class="token operator">&gt;</span>  滑入滑出
+    <span class="token punctuation">.</span><span class="token function">fadeIn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 和 <span class="token punctuation">.</span><span class="token function">fadeOut</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token operator">--</span><span class="token operator">&gt;</span>  淡入淡出
+        参数<span class="token number">1</span><span class="token operator">:</span> <span class="token function">fast</span><span class="token punctuation">(</span><span class="token number">200</span>ms<span class="token punctuation">)</span>  <span class="token function">normal</span><span class="token punctuation">(</span><span class="token number">400</span>ms<span class="token punctuation">)</span>  <span class="token function">slow</span><span class="token punctuation">(</span><span class="token number">600</span>ms<span class="token punctuation">)</span>
+        参数<span class="token number">2</span><span class="token operator">:</span> 回调函数 <span class="token operator">--</span><span class="token operator">&gt;</span> 动画执行完毕以后回调函数才执行
+
+<span class="token operator">&lt;</span>停止动画<span class="token operator">&gt;</span>
+    <span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> 停止当前正在执行的动画
+    <span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token operator">:</span> 是否停止动画队列中所有的动画
+    <span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token operator">:</span> 停止当前动画并且显示当前动画的最终效果
+
+<span class="token operator">&lt;</span><span class="token function">删除元素</span><span class="token punctuation">(</span><span class="token number">3</span>种<span class="token punctuation">)</span><span class="token operator">&gt;</span>
+    <span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> 清空节点及删除其子节点，自身并不会删除
+    <span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span>：删除所有后代节点及自身，与该节点绑定的事件删除后也将解除绑定
+    <span class="token function">detach</span><span class="token punctuation">(</span><span class="token punctuation">)</span>：删除所有后代节点及自身，但与该节点绑定的事件删除后依然保留
+
+<span class="token operator">&lt;</span>keycode 键盘编码<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#text'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">keyup</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>keyCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>keyCode <span class="token operator">==</span> <span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token comment">// 发送消息</span>
+                <span class="token comment">// 键盘对应编码</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">&lt;</span>为元素绑定多个事件<span class="token operator">&gt;</span> <span class="token number">1.</span><span class="token function">delegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token number">2.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token number">3.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>解绑事件<span class="token operator">&gt;</span>          <span class="token number">1.</span><span class="token function">undelegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token number">2.</span><span class="token function">unbind</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token number">3.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>子级委托父级绑定事件<span class="token operator">&gt;</span> <span class="token number">1.</span><span class="token function">delegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token number">2.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+对象方式绑定多个相同事件，只会运行最后一个
+
+<span class="token operator">&lt;</span>懒加载原理<span class="token operator">&gt;</span>
+    为了节省用户流量和提高页面性能，
+    可以在用户浏览到当前资源的时候，
+    再对资源进行请求和加载。
+
+    如果是图片<span class="token punctuation">,</span>可以指定data<span class="token operator">-</span>src为真实的图片地址<span class="token punctuation">,</span>src为站位的图片。
+    当资源进入视口的时候，将src属性值替换成data<span class="token operator">-</span>src的值。
+    使用元素距离文档顶部的距离offsetTop和scrollTop是否小于视口高度来判断
+
+
+<span class="token operator">&lt;</span>防抖动<span class="token operator">&gt;</span>
+    将几次操作合并为一次操作进行。
+    只有最后一次操作能被触发。
+    减少服务器请求次数<span class="token punctuation">,</span>提高性能
+
+<span class="token operator">&lt;</span>节流<span class="token operator">&gt;</span>
+    节流函数不管事件触发有多频繁，
+    都会保证在规定时间内一定会执行一次真正的事件处理函数，
+    而防抖动只是在最后一次事件后才触发一次函数。
+
+
+<span class="token operator">&lt;</span>each遍历对象<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#uu&gt;li'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">index<span class="token punctuation">,</span> ele</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index <span class="token operator">+</span> <span class="token string">'-------'</span> <span class="token operator">+</span> ele<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> opacity <span class="token operator">=</span> <span class="token punctuation">(</span>index<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">;</span>
+            <span class="token comment">//ele是DOM元素,使用时要转成jQ对象</span>
+            <span class="token function">$</span><span class="token punctuation">(</span>ele<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'opacity'</span><span class="token punctuation">,</span>opacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">&lt;</span>$让权<span class="token operator">&gt;</span>
+    把$的所有功能给了money
+    <span class="token keyword">var</span> money <span class="token operator">=</span> $<span class="token punctuation">.</span><span class="token function">noConflict</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">&lt;</span>只创建一个元素<span class="token operator">&gt;</span>
+    有则删除，无则创建
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#btn'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        通过length属性判断该元素是否存在
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'存在'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'不存在'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+<span class="token operator">&lt;</span>请求响应流程<span class="token operator">&gt;</span>
+    客户端发送请求。
+    请求首先会经过路由器处理后，发送给解析器，解析得到公网<span class="token constant">IP</span>地址。
+    根据公网<span class="token constant">IP</span>地址找到服务器，服务器返回响应。
+    再经过路由器返回到浏览器。
+    客户端<span class="token operator">--</span><span class="token operator">&gt;</span>路由器<span class="token operator">--</span><span class="token operator">&gt;</span>解析器<span class="token operator">--</span><span class="token operator">&gt;</span>ip地址<span class="token operator">--</span><span class="token operator">&gt;</span>服务器<span class="token operator">--</span><span class="token operator">&gt;</span>路由器<span class="token operator">--</span><span class="token operator">&gt;</span>浏览器
+
+<span class="token operator">&lt;</span>动态网站和静态网站的区别<span class="token operator">&gt;</span>
+    静态页面是不能随时改动的，
+    如果想改动，必须在页面上修改，然后再覆盖原来的页面，
+
+    动态页面是可以随时改变内容的，
+    可以在后台随时更新网站的内容，
+    前台页面的内容也会随之更新。
+
+<span class="token operator">&lt;</span>超全局变量<span class="token operator">&gt;</span>
+    <span class="token number">1.</span> $_GET –<span class="token operator">&gt;</span> <span class="token keyword">get</span> 传送方式
+    <span class="token number">2.</span> $_POST –<span class="token operator">&gt;</span> post 传送方式
+    <span class="token number">3.</span> $_REQUEST –<span class="token operator">&gt;</span> 可以接收到 <span class="token keyword">get</span> 和 post 两种方式的值
+    <span class="token number">4.</span> $<span class="token constant">GLOBALS</span> –<span class="token operator">&gt;</span> 引用全局作用域中可用的全部变量
+    <span class="token number">5.</span> $_FILES –<span class="token operator">&gt;</span> 上传文件使用
+    <span class="token number">6.</span> $_SERVER –<span class="token operator">&gt;</span> 系统环境变量
+    <span class="token number">7.</span> $_SESSION –<span class="token operator">&gt;</span> 用于会话控制
+    <span class="token number">8.</span> $_COOKIE –<span class="token operator">&gt;</span> 用于会话控制
+    <span class="token number">9.</span> $_ENV –<span class="token operator">&gt;</span> 服务器端环境变量
+
+<span class="token operator">&lt;</span>ajax请求步骤<span class="token operator">&gt;</span>
+    <span class="token number">1.</span>创建ajax对象
+      需要处理兼容问题
+    <span class="token number">2.</span>准备发送数据
+      xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>提交方式<span class="token punctuation">.</span>type<span class="token punctuation">,</span> 提交路径<span class="token punctuation">.</span>url<span class="token punctuation">,</span> 异步同步<span class="token punctuation">.</span>async<span class="token punctuation">)</span>
+    <span class="token number">3.</span>执行发送数据
+      get<span class="token operator">:</span>xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>
+      post<span class="token operator">:</span>xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span> 加上请求头
+    <span class="token number">4.</span>指定回调函数
+
+《ajax回调函数的具体步骤 各数值代表的含义》
+    一<span class="token punctuation">.</span>xhr<span class="token punctuation">.</span>onreadystatechange
+    二<span class="token punctuation">.</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">==</span> <span class="token number">4</span>
+        <span class="token number">0.</span>初始化对象
+        <span class="token number">1.</span>发送数据
+        <span class="token number">2.</span>返回数据
+        <span class="token number">3.</span>解析数据
+        <span class="token number">4.</span>解析完成，正常使用
+    三<span class="token punctuation">.</span>xhr<span class="token punctuation">.</span>status <span class="token operator">==</span> <span class="token number">200</span>
+        <span class="token number">200</span> 数据正常使用
+        <span class="token number">404</span> 没有找到资源
+        <span class="token number">500</span> 服务器端错误
+
+《同步和异步的不同》
+    同步，是所有的操作都做完，才返回给用户结果<span class="token punctuation">,</span>用户体验不好。
+
+    异步，不用等所有操作等做完，就响应用户请求<span class="token punctuation">,</span>用户体验较好。
+
+js事件处理机制
+
+《同源策略》
+ 是浏览器的一种安全策略，同源是指url请求地址中域名，协议名，端口全部相同。
+ 只要有一种不同就是跨域，在同源策略下，浏览器不允许ajax跨域获取数据。
+
+《jaonp作用》
+    解决跨域问题
+
+《jsonp原理》
+        动态创建script标签<span class="token punctuation">,</span> 通过src属性发送请求
+    服务端响应给我们的是函数调用
+    所以我们需要在前端创建一个函数<span class="token punctuation">,</span>
+    并且这两个函数名需要保持一致，最终实现跨域。
+
+<span class="token operator">&lt;</span>jq的优点<span class="token operator">&gt;</span>
+    <span class="token number">1.</span>封装方法多
+    <span class="token number">2.</span>隐式迭代
+    <span class="token number">3.</span>没有兼容问题
+    <span class="token number">4.</span>代码简洁
+
+<span class="token operator">&lt;</span>入口函数 优缺点<span class="token operator">&gt;</span>
+    <span class="token number">1.</span>$<span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token number">2.</span><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    js的入口函数需要页面全部加载完成才执行，
+    jq的入口函数只需要基本的标签加载完就可以执行。
+
+<span class="token operator">&lt;</span>jq和js转换 为什么转换<span class="token operator">&gt;</span>
+    <span class="token keyword">var</span> $dv <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&quot;#dv&quot;</span><span class="token punctuation">)</span>  <span class="token comment">//jQuery对象</span>
+    <span class="token keyword">var</span> dv <span class="token operator">=</span> $dv<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>     <span class="token comment">//DOM对象</span>
+    方法不通用，dom对象只能使用dom的方法，而jq对象只能使用jq的方法。
+
+<span class="token operator">&lt;</span>jq对象和dom对象的区别<span class="token operator">&gt;</span>
+    <span class="token function">jq对象是一个包装集</span><span class="token punctuation">(</span>伪数组<span class="token punctuation">)</span>
+
+<span class="token operator">&lt;</span>选择器及作用<span class="token operator">&gt;</span>
+    <span class="token number">1.</span>id选择器 获取指定id的元素
+    <span class="token number">2.</span>类选择器 获取同一类<span class="token keyword">class</span>的元素
+    <span class="token number">3.</span>标签选择器 获取相同标签的所有元素
+    <span class="token number">4.</span>交集选择器 获取满足所有条件的元素
+    <span class="token number">5.</span>并集选择器 <span class="token function">获取满足条件之一的元素</span><span class="token punctuation">(</span>逗号隔开<span class="token punctuation">)</span>
+    <span class="token number">6.</span>子代选择器 <span class="token function">获取第一代的元素</span><span class="token punctuation">(</span>使用<span class="token operator">&gt;</span><span class="token punctuation">)</span>
+    <span class="token number">7.</span>后代选择器 <span class="token function">获取所有子级的元素</span><span class="token punctuation">(</span>使用空格<span class="token punctuation">)</span>
+    <span class="token number">8.</span>过滤选择器
+        <span class="token operator">:</span><span class="token function">eq</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  获取指定索引的元素
+        <span class="token operator">:</span><span class="token function">odd</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 获取索引是奇数的元素
+        <span class="token operator">:</span><span class="token function">even</span><span class="token punctuation">(</span><span class="token punctuation">)</span>获取索引是偶数的元素
+    <span class="token number">9.</span>筛选选择器
+        <span class="token punctuation">.</span><span class="token function">children</span><span class="token punctuation">(</span><span class="token punctuation">)</span>获取元素的第一代元素 相当于子选择器
+        <span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    获取元素所有的子元素 相当于后代选择器
+        <span class="token punctuation">.</span><span class="token function">siblings</span><span class="token punctuation">(</span><span class="token punctuation">)</span>获取元素的兄弟元素 <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&quot;div&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sibings</span><span class="token punctuation">(</span><span class="token string">&quot;ul&quot;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  获取父级元素
+        <span class="token punctuation">.</span><span class="token function">eq</span><span class="token punctuation">(</span><span class="token punctuation">)</span>      获取指定索引的元素
+        <span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    获取下一个兄弟元素
+        <span class="token punctuation">.</span><span class="token function">prev</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    获取上一个兄弟元素
+
+<span class="token operator">&lt;</span>jq的事件加载<span class="token operator">&gt;</span>
+    <span class="token function">一是$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    二是ready，表示文档结构已经加载完成（不包含图片等非文字媒体文件），
+    三是load，指示页面包含图片等文件在内的所有元素都加载完成。
+
+<span class="token operator">&lt;</span>链式编程<span class="token operator">&gt;</span>
+    对象调用方法后返回的还是这个对象本身
+    优点：省略重复性的代码
+
+<span class="token operator">&lt;</span>解决断链问题<span class="token operator">&gt;</span>
+    <span class="token function">调用end</span><span class="token punctuation">(</span><span class="token punctuation">)</span>方法。返回链被破坏前的对象。
+
+<span class="token operator">&lt;</span>动画效果及参数<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#dv'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    第一个参数：对象，里面可以传需要动画的样式
+    第二个参数：speed 动画的执行时间
+    第三个参数：动画的执行效果
+    第四个参数：回调函数
+
+    <span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 和 <span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span>         <span class="token operator">--</span><span class="token operator">&gt;</span>  显示隐藏
+    <span class="token punctuation">.</span><span class="token function">slideUp</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 和 <span class="token punctuation">.</span><span class="token function">slideDown</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">--</span><span class="token operator">&gt;</span>  滑入滑出
+    <span class="token punctuation">.</span><span class="token function">fadeIn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 和 <span class="token punctuation">.</span><span class="token function">fadeOut</span><span class="token punctuation">(</span><span class="token punctuation">)</span>    <span class="token operator">--</span><span class="token operator">&gt;</span>  淡入淡出
+        参数<span class="token number">1</span><span class="token operator">:</span> <span class="token function">fast</span><span class="token punctuation">(</span><span class="token number">200</span>ms<span class="token punctuation">)</span>  <span class="token function">normal</span><span class="token punctuation">(</span><span class="token number">400</span>ms<span class="token punctuation">)</span>  <span class="token function">slow</span><span class="token punctuation">(</span><span class="token number">600</span>ms<span class="token punctuation">)</span>
+        参数<span class="token number">2</span><span class="token operator">:</span> 回调函数 <span class="token operator">--</span><span class="token operator">&gt;</span> 动画执行完毕以后回调函数才执行
+
+<span class="token operator">&lt;</span>停止动画<span class="token operator">&gt;</span>
+    <span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> 停止当前正在执行的动画
+    <span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token operator">:</span> 是否停止动画队列中所有的动画
+    <span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token operator">:</span> 停止当前动画并且显示当前动画的最终效果
+
+<span class="token operator">&lt;</span><span class="token function">删除元素</span><span class="token punctuation">(</span><span class="token number">3</span>种<span class="token punctuation">)</span><span class="token operator">&gt;</span>
+    <span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> 清空节点及删除其子节点，自身并不会删除
+    <span class="token function">remove</span><span class="token punctuation">(</span><span class="token punctuation">)</span>：删除所有后代节点及自身，与该节点绑定的事件删除后也将解除绑定
+    <span class="token function">detach</span><span class="token punctuation">(</span><span class="token punctuation">)</span>：删除所有后代节点及自身，但与该节点绑定的事件删除后依然保留
+
+<span class="token operator">&lt;</span>keycode 键盘编码<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#text'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">keyup</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>keyCode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>keyCode <span class="token operator">==</span> <span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token comment">// 发送消息</span>
+                <span class="token comment">// 键盘对应编码</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">&lt;</span>为元素绑定多个事件<span class="token operator">&gt;</span> <span class="token number">1.</span><span class="token function">delegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token number">2.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token number">3.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>解绑事件<span class="token operator">&gt;</span>          <span class="token number">1.</span><span class="token function">undelegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token number">2.</span><span class="token function">unbind</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token number">3.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>子级委托父级绑定事件<span class="token operator">&gt;</span> <span class="token number">1.</span><span class="token function">delegate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token number">2.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+对象方式绑定多个相同事件，只会运行最后一个
+
+<span class="token operator">&lt;</span>懒加载原理<span class="token operator">&gt;</span>
+    为了节省用户流量和提高页面性能，
+    可以在用户浏览到当前资源的时候，
+    再对资源进行请求和加载。
+
+    如果是图片<span class="token punctuation">,</span>可以指定data<span class="token operator">-</span>src为真实的图片地址<span class="token punctuation">,</span>src为站位的图片。
+    当资源进入视口的时候，将src属性值替换成data<span class="token operator">-</span>src的值。
+    使用元素距离文档顶部的距离offsetTop和scrollTop是否小于视口高度来判断然而
+
+
+<span class="token operator">&lt;</span>防抖动<span class="token operator">&gt;</span>
+    将几次操作合并为一次操作进行。
+    只有最后一次操作能被触发。
+    减少服务器请求次数<span class="token punctuation">,</span>提高性能
+
+<span class="token operator">&lt;</span>节流<span class="token operator">&gt;</span>
+    节流函数不管事件触发有多频繁，
+    都会保证在规定时间内一定会执行一次真正的事件处理函数，
+    而防抖动只是在最后一次事件后才触发一次函数。
+
+
+<span class="token operator">&lt;</span>each遍历对象<span class="token operator">&gt;</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#uu&gt;li'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">index<span class="token punctuation">,</span> ele</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>index <span class="token operator">+</span> <span class="token string">'-------'</span> <span class="token operator">+</span> ele<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> opacity <span class="token operator">=</span> <span class="token punctuation">(</span>index<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">;</span>
+            <span class="token comment">//ele是DOM元素,使用时要转成jQ对象</span>
+            <span class="token function">$</span><span class="token punctuation">(</span>ele<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">'opacity'</span><span class="token punctuation">,</span>opacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">&lt;</span>$让权<span class="token operator">&gt;</span>
+    把$的所有功能给了money
+    <span class="token keyword">var</span> money <span class="token operator">=</span> $<span class="token punctuation">.</span><span class="token function">noConflict</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token operator">&lt;</span>只创建一个元素<span class="token operator">&gt;</span>
+    有则删除，无则创建
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#btn'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        通过length属性判断该元素是否存在
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'存在'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'不存在'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+<span class="token operator">&lt;</span>请求响应流程<span class="token operator">&gt;</span>
+    客户端发送请求。
+    请求首先会经过路由器处理后，发送给解析器，解析得到公网<span class="token constant">IP</span>地址。
+    根据公网<span class="token constant">IP</span>地址找到服务器，服务器返回响应。
+    再经过路由器返回到浏览器。
+    客户端<span class="token operator">--</span><span class="token operator">&gt;</span>路由器<span class="token operator">--</span><span class="token operator">&gt;</span>解析器<span class="token operator">--</span><span class="token operator">&gt;</span>ip地址<span class="token operator">--</span><span class="token operator">&gt;</span>服务器<span class="token operator">--</span><span class="token operator">&gt;</span>路由器<span class="token operator">--</span><span class="token operator">&gt;</span>浏览器
+
+<span class="token operator">&lt;</span>动态网站和静态网站的区别<span class="token operator">&gt;</span>
+    静态页面是不能随时改动的，
+    如果想改动，必须在页面上修改，然后再覆盖原来的页面，
+
+    动态页面是可以随时改变内容的，
+    可以在后台随时更新网站的内容，
+    前台页面的内容也会随之更新。
+
+<span class="token operator">&lt;</span>超全局变量<span class="token operator">&gt;</span>
+    <span class="token number">1.</span> $_GET –<span class="token operator">&gt;</span> <span class="token keyword">get</span> 传送方式
+    <span class="token number">2.</span> $_POST –<span class="token operator">&gt;</span> post 传送方式
+    <span class="token number">3.</span> $_REQUEST –<span class="token operator">&gt;</span> 可以接收到 <span class="token keyword">get</span> 和 post 两种方式的值
+    <span class="token number">4.</span> $<span class="token constant">GLOBALS</span> –<span class="token operator">&gt;</span> 引用全局作用域中可用的全部变量
+    <span class="token number">5.</span> $_FILES –<span class="token operator">&gt;</span> 上传文件使用
+    <span class="token number">6.</span> $_SERVER –<span class="token operator">&gt;</span> 系统环境变量
+    <span class="token number">7.</span> $_SESSION –<span class="token operator">&gt;</span> 用于会话控制
+    <span class="token number">8.</span> $_COOKIE –<span class="token operator">&gt;</span> 用于会话控制
+    <span class="token number">9.</span> $_ENV –<span class="token operator">&gt;</span> 服务器端环境变量
+
+<span class="token operator">&lt;</span>ajax请求步骤<span class="token operator">&gt;</span>
+    <span class="token number">1.</span>创建ajax对象
+      需要处理兼容问题
+    <span class="token number">2.</span>准备发送数据
+      xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span>提交方式<span class="token punctuation">.</span>type<span class="token punctuation">,</span> 提交路径<span class="token punctuation">.</span>url<span class="token punctuation">,</span> 异步同步<span class="token punctuation">.</span>async<span class="token punctuation">)</span>
+    <span class="token number">3.</span>执行发送数据
+      get<span class="token operator">:</span>xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span>
+      post<span class="token operator">:</span>xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span> 加上请求头
+    <span class="token number">4.</span>指定回调函数
+
+《ajax回调函数的具体步骤 各数值代表的含义》
+    一<span class="token punctuation">.</span>xhr<span class="token punctuation">.</span>onreadystatechange
+    二<span class="token punctuation">.</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">==</span> <span class="token number">4</span>
+        <span class="token number">0.</span>初始化对象
+        <span class="token number">1.</span>发送数据
+        <span class="token number">2.</span>返回数据
+        <span class="token number">3.</span>解析数据
+        <span class="token number">4.</span>解析完成，正常使用
+    三<span class="token punctuation">.</span>xhr<span class="token punctuation">.</span>status <span class="token operator">==</span> <span class="token number">200</span>
+        <span class="token number">200</span> 数据正常使用
+        <span class="token number">404</span> 没有找到资源
+        <span class="token number">500</span> 服务器端错误
+
+《同步和异步的不同》
+    同步，是所有的操作都做完，才返回给用户结果<span class="token punctuation">,</span>用户体验不好。
+
+    异步，不用等所有操作等做完，就响应用户请求<span class="token punctuation">,</span>用户体验较好。
+
+这个同步的意思是当<span class="token constant">JS</span>代码加载到当前<span class="token constant">AJAX</span>的时候会把页面里所有的代码停止加载，
+页面出去假死状态，当这个<span class="token constant">AJAX</span>执 行完毕后才会继续运行其他代码页面假死状态解除。
+而异步则这个<span class="token constant">AJAX</span>代码运行中的时候其他代码一样可以运行。
+
+
+
+《同源策略》
+ 是浏览器的一种安全策略，同源是指url请求地址中域名，协议名，端口全部相同。
+ 只要有一种不同就是跨域，在同源策略下，浏览器不允许ajax跨域获取数据。
+
+《jaonp作用》
+    解决跨域问题
+
+《jsonp原理》
+        动态创建script标签<span class="token punctuation">,</span> 通过src属性发送请求
+    服务端响应给我们的是函数调用
+    所以我们需要在前端创建一个函数<span class="token punctuation">,</span>
+    并且这两个函数名需要保持一致，最终实现跨域。
+
+《ajax的作用》
+    <span class="token number">1.</span>显示新的html内容，而不用载入整个页面
+    <span class="token number">2.</span>提交一个表单，并且立即显示结果
+    <span class="token number">3.</span>登录而不用跳转到另一个页面
+
+《<span class="token keyword">get</span>和post提交的区别》
+    <span class="token keyword">get</span>的请求参数是在url中传递，需要注意编码问题
+    post的请求参数是在请求体中传递，需要设置请求头信息
+
+《ajax的数据格式》
+    xml json
+
+    添加<span class="token operator">:</span> <span class="token function">addClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    移除<span class="token operator">:</span> <span class="token function">removeClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    判断<span class="token operator">:</span> <span class="token function">hasClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    切换<span class="token operator">:</span> <span class="token function">toggleClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token function">append</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 方法在被选元素的结尾（仍然在内部）插入指定内容
+    <span class="token function">prepend</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 方法在被选元素的开头（仍位于内部）插入指定内容
+    <span class="token function">after</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 方法在被选元素的后面插入一个指定的元素
+    <span class="token function">before</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 方法在被选元素的前面插入一个指定的元素
+
+ <span class="token operator">&lt;</span>客户端 php 阿帕奇三者如何协调工作的<span class="token operator">&gt;</span>
+客户端发送请求到阿帕奇，静态数据由阿帕奇处理完成后返回客户端。
+动态数据由阿帕奇发送到php进行处理，处理完成发送给阿帕奇，再有阿帕奇返回客户端。
+<span class="token operator">&lt;</span>php三种输出方式<span class="token operator">&gt;</span>
+var_dump函数 输出变量的内容、类型或字符串的内容、类型、长度。常用来调试。
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 输出一个字符串
+<span class="token function">echo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 输出多个字符串
+<span class="token operator">&lt;</span>isset、empty、is_null的区别<span class="token operator">&gt;</span>
+isset 判断变量是否定义或者是否为空
+
+empty：判断变量的值是否为空，能转换为<span class="token boolean">false</span>的都是空，为空返回<span class="token boolean">true</span>，反之返回<span class="token boolean">false</span>。
+<span class="token function">is_null：检测传入的值</span><span class="token punctuation">(</span>值、变量、表达式<span class="token punctuation">)</span>是否为<span class="token keyword">null</span>
+
+<span class="token operator">&lt;</span>jquery的<span class="token keyword">async</span>这个属性<span class="token operator">&gt;</span>
+默认是<span class="token boolean">true</span>：异步，<span class="token boolean">false</span>：同步。
+
+<span class="token operator">&lt;</span>如何解决跨域问题<span class="token operator">&gt;</span>
+理解跨域的概念：协议、域名、端口都相同才同域，否则都是跨域
+出于安全考虑，服务器不允许ajax跨域获取数据，但是可以跨域获取文件内容，所以基于这一点，可以动态创建script标签，使用标签的src属性访问js文件的形式获取js脚本，并且这个js脚本中的内容是函数调用，该函数调用的参数是服务器返回的数据，为了获取这里的参数数据，需要事先在页面中定义回调函数，在回调函数中处理服务器返回的数据，这就是解决跨域问题的主流解决方案
+
+<span class="token operator">&lt;</span>Ajax的最大的特点是什么<span class="token operator">&gt;</span>
+    Ajax可以实现异步效果，实现页面局部刷新，带来更好的用户体验；按需获取数据，节约带宽资源；
+
+<span class="token operator">&lt;</span>ajax的缺点<span class="token operator">&gt;</span>
+ <span class="token number">1</span>、ajax不支持浏览器back按钮。
+ <span class="token number">2</span>、安全问题 <span class="token constant">AJAX</span>暴露了与服务器交互的细节。
+ <span class="token number">3</span>、对搜索引擎的支持比较弱。
+ <span class="token number">4</span>、破坏了程序的异常机制。
+
+<span class="token operator">&lt;</span>ajax请求时，如何解释json数据<span class="token operator">&gt;</span>
+推荐使用<span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token punctuation">)</span>更靠谱，对数据的安全性更好。
+
+<span class="token operator">&lt;</span><span class="token constant">HTTP</span>和<span class="token constant">HTTPS</span><span class="token operator">&gt;</span>
+<span class="token constant">HTTPS</span>的安全性更高，
+默认<span class="token constant">HTTP</span>的端口号为<span class="token number">80</span>，
+<span class="token constant">HTTPS</span>的端口号为<span class="token number">443</span>。
+</code></pre></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><canvas id="vuepress-canvas-cursor"></canvas><div></div><div id="goTop" class="hide-cat" data-v-bf92849a></div><div><div class="sponsor-container" data-v-a142c76a><div class="sponsor-love position-absolute transition-3ms" data-v-a142c76a>
+    Sponsor
+  </div> <a href="https://github.com/yokefellow/vuepress-plugin-sponsor" target="_blank" title="Github" class="sponsor-github position-absolute transition-3ms" data-v-a142c76a></a> <ul class="sponsor-payment-options transition-3ms" data-v-a142c76a><li id="alipay-option" class="transition-3ms" data-v-a142c76a></li> <li id="wechat-option" class="transition-3ms" data-v-a142c76a></li> <li id="qq-option" class="transition-3ms" data-v-a142c76a></li> <li id="paypal-option" class="transition-3ms" data-v-a142c76a></li></ul> <div class="sponsor-qrcode-container position-absolute" style="display:none;" data-v-a142c76a data-v-a142c76a><div class="sponsor-qrcode-info" style="background-image:url();pointer-events:none;display:none;" data-v-a142c76a data-v-a142c76a></div></div> <div class="sponsor-message position-absolute" style="display:none;" data-v-a142c76a data-v-a142c76a>
+      主人忘记设置啦
+    </div></div></div><div class="reco-bgm-panel" data-v-39f9e6e0><audio id="bgm" src="https://www.haoge.plus/music/不再犹豫.mp3" data-v-39f9e6e0></audio> <div class="reco-float-box" style="bottom:200px;z-index:999999;display:none;" data-v-39f9e6e0 data-v-41bcba48 data-v-39f9e6e0><img src="/星光荡开宇宙.jpeg" data-v-39f9e6e0></div> <div class="reco-bgm-box" style="left:10px;bottom:10px;z-index:999999;" data-v-39f9e6e0 data-v-41bcba48 data-v-39f9e6e0><div class="reco-bgm-cover" style="background-image:url(/星光荡开宇宙.jpeg);" data-v-39f9e6e0><div class="mini-operation" style="display:none;" data-v-39f9e6e0><i class="reco-bgm reco-bgm-pause" style="display:none;" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-play" style="display:none;" data-v-39f9e6e0></i></div> <div class="falut-message" style="display:none;" data-v-39f9e6e0>
+          播放失败
+        </div></div> <div class="reco-bgm-info" data-v-39f9e6e0 data-v-41bcba48 data-v-39f9e6e0><div class="info-box" data-v-39f9e6e0><i class="reco-bgm reco-bgm-music music" data-v-39f9e6e0></i>不再犹豫</div> <div class="info-box" data-v-39f9e6e0><i class="reco-bgm reco-bgm-artist" data-v-39f9e6e0></i>BEYOND</div> <div class="reco-bgm-progress" data-v-39f9e6e0><div class="progress-bar" data-v-39f9e6e0><div class="bar" data-v-39f9e6e0></div></div></div> <div class="reco-bgm-operation" data-v-39f9e6e0><i class="reco-bgm reco-bgm-last last" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-pause pause" style="display:none;" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-play play" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-next next" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-volume1 volume" data-v-39f9e6e0></i> <i class="reco-bgm reco-bgm-mute mute" style="display:none;" data-v-39f9e6e0></i> <div class="volume-bar" data-v-39f9e6e0><div class="bar" data-v-39f9e6e0></div></div></div></div> <div class="reco-bgm-left-box" data-v-39f9e6e0 data-v-41bcba48 data-v-39f9e6e0><i class="reco-bgm reco-bgm-left" data-v-39f9e6e0></i></div></div></div></div></div>
+    <script src="/assets/js/app.ca452e2b.js" defer></script><script src="/assets/js/3.69ab2c12.js" defer></script><script src="/assets/js/1.a19a2f43.js" defer></script><script src="/assets/js/98.58c9d6d6.js" defer></script>
+  </body>
+</html>
